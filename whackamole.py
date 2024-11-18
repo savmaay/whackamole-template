@@ -23,10 +23,10 @@ def main():
                         new_y = random.randrange(0, 16) * 32
                         mole_rect.topleft = (new_x, new_y)
             screen.fill("light green")
-            for i in range(10):
-                pygame.draw.line(screen, "blue", (i*64,0), (i*64,512))
-            for i in range(8):
-                pygame.draw.line(screen, "red", (0, i*64), (640, i*64))
+            for i in range(32):
+                pygame.draw.line(screen, "blue", (i*32,0), (i*32,512))
+            for i in range(32):
+                pygame.draw.line(screen, "red", (0, i*32), (640, i*32))
             screen.blit(mole_image, mole_rect)
             pygame.display.flip()
             clock.tick(60)
